@@ -9,7 +9,7 @@
 %table.table.table-bordered
   %thead
     %tr
-      %th Date of %Transaction
+      %th Date of Transaction
       %th Amount
       %th Transaction Type
   
@@ -24,3 +24,9 @@
       %th
       %th Balance
       %th #{number_to_currency(@bank_account.balance)}
+
+= javascript_include_tag "bank_accounts/Show"
+:javascript
+  $(document).ready(function() {
+    Show.init();
+  });
