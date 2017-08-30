@@ -4,6 +4,8 @@ class Client < ApplicationRecord
   validates :middle_name, presence: true
   validates :client_number, presence: true, uniqueness: true
 
+  has_many :bank_accounts
+
   before_save :format_name
 
   def to_s
