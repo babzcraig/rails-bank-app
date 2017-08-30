@@ -5,8 +5,8 @@ class AccountTransaction < ApplicationRecord
 
   validates :bank_account, presence: true
   validates :amount, numericality: true, presence: true
-  validates :transanction_type, presence: true, inclusion: { in: TRANSATION_TYPES }
-  validates :transaction_number, preence: true, uniqueness: true
+  validates :transanction_type, presence: true, inclusion: { in: TRANSACTION_TYPES }
+  validates :transaction_number, presence: true, uniqueness: true
 
   before_validation :load_defaults
 

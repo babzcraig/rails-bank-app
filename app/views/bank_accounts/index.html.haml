@@ -12,7 +12,7 @@
     - @bank_accounts.each do |account|
       %tr
         %td #{account.account_number}
-        %td #{number_to_curency(account.balance, unit: "P")}
+        %td #{number_to_currency(account.balance)}
         %td
           = link_to bank_account_path(account.id), class: "btn btn-primary" do 
             Show
